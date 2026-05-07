@@ -6,13 +6,12 @@
   </head>
   <body>
     <script>
-      new Image().src = 'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step1';
-      setTimeout(() => {
-        new Image().src = 'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step2';
-      }, 300);
-      setTimeout(() => {
-        new Image().src = 'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step3';
-      }, 600);
+      const urls = [
+        'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step1',
+        'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step2',
+        'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step3'
+      ];
+      urls.forEach((u, i) => setTimeout(() => new Image().src = u, i * 700));
     </script>
   </body>
 </html>
