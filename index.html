@@ -5,18 +5,14 @@
     <title>Chain</title>
   </head>
   <body>
-    <img id="tracker" src="https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step1" alt="">
     <script>
-      const img = document.getElementById('tracker');
-      img.onerror = () => {
-        img.onerror = null;
-        img.src = 'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step2';
-        img.onload = () => {
-          setTimeout(() => {
-            img.src = 'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step3';
-          }, 500);
-        };
-      };
+      new Image().src = 'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step1';
+      setTimeout(() => {
+        new Image().src = 'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step2';
+      }, 300);
+      setTimeout(() => {
+        new Image().src = 'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step3';
+      }, 600);
     </script>
   </body>
 </html>
