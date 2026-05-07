@@ -1,6 +1,22 @@
 <!doctype html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chain</title>
+  </head>
   <body>
-    <img src="https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step3">
+    <img id="tracker" src="https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step1" alt="">
+    <script>
+      const img = document.getElementById('tracker');
+      img.onerror = () => {
+        img.onerror = null;
+        img.src = 'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step2';
+        img.onload = () => {
+          setTimeout(() => {
+            img.src = 'https://webhook.site/d860b3ed-d425-4fb5-9585-a2e3eed9e99e/step3';
+          }, 500);
+        };
+      };
+    </script>
   </body>
 </html>
